@@ -11,6 +11,9 @@ void INIT()
     // MCLK and SMCLK set to 1MHZ
     DCOCTL = CALDCO_16MHZ;
 	BCSCTL1 = CALBC1_16MHZ;
+
+	P1DIR |= LED_PIN;
+	P1OUT &= ~LED_PIN;
 }
 
 /*
@@ -19,6 +22,10 @@ void INIT()
 int main(void)
 {
 	INIT();
+
+	P1OUT |= LED_PIN;
+	__delay_cycles(10000);
+	P1OUT &= ~LED_PIN;
 
 	for (;;)
 	{

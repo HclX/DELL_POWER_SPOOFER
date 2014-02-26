@@ -244,7 +244,7 @@ void PORT1_ISR(void)
 			set_ccr1_timer(20 * CPU_FREQ);
 		}
 
-		// last thing to do is remember when the ling is pulling down so that
+		// last thing to do is remember when the line is pulling down so that
 		// we can detect reset pulse
 		_downTime = TAR;
 	}
