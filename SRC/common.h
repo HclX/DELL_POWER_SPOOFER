@@ -18,13 +18,9 @@
 #define CPU_FREQ 		16
 
 #ifndef CALDCO_16MHZ
+// Specifically calibrated for the MSP430G2211 chip I have
 #define CALDCO_16MHZ	0xD6
 #define CALBC1_16MHZ	0xBE
-#endif
-
-#ifndef CALDCO_8MHZ
-#define CALDCO_8MHZ	0xD6
-#define CALBC1_8MHZ	0xBE
 #endif
 
 #define DELAY_US(x)		__delay_cycles(CPU_FREQ * (x))

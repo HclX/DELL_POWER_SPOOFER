@@ -8,19 +8,9 @@ void INIT()
 {
     WDTCTL = WDTPW | WDTHOLD;	// Stop watchdog timer
 
-#if CPU_FREQ == 16
     // MCLK and SMCLK set to 1MHZ
     DCOCTL = CALDCO_16MHZ;
 	BCSCTL1 = CALBC1_16MHZ;
-#elif CPU_FREQ == 8
-    // MCLK and SMCLK set to 1MHZ
-    DCOCTL = CALDCO_8MHZ;
-	BCSCTL1 = CALBC1_8MHZ;
-#elif CPU_FREQ == 1
-    // MCLK and SMCLK set to 1MHZ
-    DCOCTL = CALDCO_1MHZ;
-	BCSCTL1 = CALBC1_1MHZ;
-#endif
 }
 
 /*
