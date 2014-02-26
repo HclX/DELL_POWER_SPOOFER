@@ -1,0 +1,8 @@
+.metadata/
+.launches/
+.settings/
+Debug/
+Release/
+bin/
+node_modules/
+*.suo
